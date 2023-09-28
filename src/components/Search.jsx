@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { mockSearchResults } from "../constants/mock"
 import {XIcon, SearchIcon} from "@heroicons/react/solid"
-import { update } from "sneaks-api/models/Sneaker";
 
 
 const Search = () => {
