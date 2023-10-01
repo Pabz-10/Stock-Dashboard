@@ -10,7 +10,7 @@ const Details = ({ details }) => {
 		ipo: "IPO Date",
 		marketCapitalization: "Market Capitalization",
 		finnhubIndustry: "Industry",
-        // Specifing the key company details
+		// Specifing the key company details
 	};
 
 	const convertMillionToBillion = (number) => {
