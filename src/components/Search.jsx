@@ -23,6 +23,7 @@ const Search = () => {
 				const searchResults = await searchSymbols(input);
 				const result = searchResults.result;
 				setBestMatches(result);
+				//searches our input agianst the finnhub api database and returns closest match
 			}
 		} catch (error) {
 			setBestMatches([]);

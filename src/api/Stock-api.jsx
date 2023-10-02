@@ -1,7 +1,8 @@
 const basePath = "https:/finnhub.io/api/v1";
+const apiKey = import.meta.env.VITE_REACT_APP_API_KEY;
 
 export const searchSymbols = async (query) => {
-	const url = `${basePath}/search?q=${query}&token=${process.env.REACT_APP_API_KEY}`;
+	const url = `${basePath}/search?q=${query}&token=${apiKey}`;
 	const response = await fetch(url);
 	// searchs for the best matching symbols of the query
 
@@ -15,7 +16,7 @@ export const searchSymbols = async (query) => {
 };
 
 export const fetchStockDetails = async (stockSymbol) => {
-	const url = `${basePath}/stock/profile2?symbol=${stockSymbol}&token=${process.env.REACT_APP_API_KEY}`;
+	const url = `${basePath}/stock/profile2?symbol=${stockSymbol}&token=${apiKey}`;
 	const response = await fetch(url);
 	// searches for the specific stock
 
@@ -27,7 +28,7 @@ export const fetchStockDetails = async (stockSymbol) => {
 };
 
 export const fetchQuote = async (stockSymbol) => {
-	const url = `${basePath}/quotes?symbol=${stockSymbol}&token=${process.env.REACT_APP_API_KEY}`;
+	const url = `${basePath}/quotes?symbol=${stockSymbol}&token=${apiKey}`;
 	const response = await fetch(url);
 	//searches for the most recent stock price
 
@@ -45,7 +46,7 @@ export const fetchHistoricalData = async (
 	from,
 	to
 ) => {
-	const url = `${basePath}/stock/candle?symbol=${stockSymbol}&resolution=${resolution}&from=${from}&to=${to}&token=${process.env.REACT_APP_API_KEY}`;
+	const url = `${basePath}/stock/candle?symbol=${stockSymbol}&resolution=${resolution}&from=${from}&to=${to}&token=${apiKey}`;
 	const response = await fetch(url);
 	//searches for the stocks histroical data
 
